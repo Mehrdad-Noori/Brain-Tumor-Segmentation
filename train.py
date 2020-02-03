@@ -7,8 +7,8 @@ from data_generator import CustomDataGenerator
 from tensorflow.keras.callbacks import CSVLogger, ModelCheckpoint, TensorBoard
 
 def train_model(hdf5_dir, brains_idx_dir, view, modified_unet=True, batch_size=16, val_batch_size=32,
-                lr=0.01, epochs=100, hor_flip=False, ver_flip=False, zoom_range=0.0, save_dir='./data/',
-                input_shape=None, start_chs=64, levels=3, multiprocessing=False, load_model_dir=None):
+                lr=0.01, epochs=100, hor_flip=False, ver_flip=False, zoom_range=0.0, save_dir='./save/',
+                start_chs=64, levels=3, multiprocessing=False, load_model_dir=None):
     """
 
     The function that builds/loads UNet model, initializes the data generators for training and validation, and finally 
@@ -23,17 +23,20 @@ def train_model(hdf5_dir, brains_idx_dir, view, modified_unet=True, batch_size=1
     datagen_val      = CustomDataGenerator(hdf5_file, brain_idx, val_batch_size, view, 'validation', shuffle=False)
     
     # add callbacks    
-    logger       = CSVLogger(save_dir + 'log.txt')
-    checkpointer = ModelCheckpoint(filepath = save_dir + 'UNet_{}_{}'.format(view, os.path.basename(brains_idx_dir)[:5])\
-                                             + '.hdf5', verbose=1, save_best_only=True)
-    tensorboard  = TensorBoard(save_dir + 'tensorboard')
+    save_dir     = os.path.join(save_dir, '{}_{}'.format(view, os.path.basename(brains_idx_dir)[:5]))
+    if not os.path.isdir(save_dir):
+        os.mkdir(save_dir)
+    logger       = CSVLogger(os.path.join(save_dir, 'log.txt'))
+    checkpointer = ModelCheckpoint(filepath = os.path.join(save_dir, 'model.hdf5'), verbose=1, save_best_only=True)
+    tensorboard  = TensorBoard(os.path.join(save_dir, 'tensorboard'))
     callbacks    = [logger, checkpointer, tensorboard]        
     
     # building the model
-    model            = unet_model(input_shape, modified_unet, lr, start_chs, levels)
+    model_input_shape = datagen_train.data_shape[1:]
+    model             = unet_model(model_input_shape, modified_unet, lr, start_chs, levels)
     # training the model
     model.fit_generator(datagen_train, epochs=epochs, use_multiprocessing=multiprocessing, 
-                        callbacks=callbacks, validation_data = datagen_val)
+                        callbacks=callbacks, validation_data = datagen_val, steps_per_epoch=5, validation_steps=5)
 
 
    
@@ -42,7 +45,7 @@ if __name__ == '__main__':
     
     train_model(cfg['hdf5_dir'], cfg['brains_idx_dir'], cfg['view'], cfg['modified_unet'], cfg['batch_size'], 
                 cfg['val_batch_size'], cfg['lr'], cfg['epochs'], cfg['hor_flip'], cfg['ver_flip'], cfg['zoom_range'], 
-                cfg['save_dir'], cfg['table_data_shape'], cfg['start_chs'], cfg['levels'], cfg['multiprocessing'], 
+                cfg['save_dir'], cfg['start_chs'], cfg['levels'], cfg['multiprocessing'], 
                 cfg['load_model_dir'])
     
     

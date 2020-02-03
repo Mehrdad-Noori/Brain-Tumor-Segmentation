@@ -75,7 +75,7 @@ class CustomDataGenerator(Sequence):
         self.data_shape      = tuple(np.array(self.data_storage.shape[1:])[np.array(self.view_axes)])
         
         print('Using {} out of {} brains'.format(len(self.brain_idx), total_brains), end=' ')
-        print('(= {} out of {} 2D slices)'.format(len(self.brain_idx) * self.data_shape[0], total_brains * self.data_shape[0]))
+        print('({} out of {} 2D slices)'.format(len(self.brain_idx) * self.data_shape[0], total_brains * self.data_shape[0]))
         print('the generated data shape in "{}" view: {}'.format(view, str(self.data_shape[1:])))
         print('-----'*10)
 

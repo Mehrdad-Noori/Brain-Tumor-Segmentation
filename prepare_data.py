@@ -36,10 +36,10 @@ def read_brain(brain_dir, mode='train', x0=42, x1=194, y0=29, y1=221, z0=2, z1=1
     """
     
     brain_dir = os.path.normpath(brain_dir)
-    flair     = glob( os.path.join(brain_dir, '*_flair*.nii.gz'))
-    t1        = glob( os.path.join(brain_dir, '*_t1*.nii.gz'))
-    t1ce      = glob( os.path.join(brain_dir, '*_t1ce*.nii.gz'))
-    t2        = glob( os.path.join(brain_dir, '*_t2*.nii.gz'))
+    flair     = glob(os.path.join(brain_dir, '*_flair*.nii.gz'))
+    t1        = glob(os.path.join(brain_dir, '*_t1*.nii.gz'))
+    t1ce      = glob(os.path.join(brain_dir, '*_t1ce*.nii.gz'))
+    t2        = glob(os.path.join(brain_dir, '*_t2*.nii.gz'))
     
     if mode=='train':
         gt             = glob( os.path.join(brain_dir, '*_seg*.nii.gz'))
@@ -160,7 +160,7 @@ def create_table(dataset_dir, table_data_shape, save_dir, crop_coordinates, data
     
 if __name__ == '__main__':
       
-    create_table(cfg['data_dir'], cfg['table_data_shape'], cfg['save_dir'], 
+    create_table(cfg['data_dir'], cfg['table_data_shape'], cfg['save_data_dir'], 
                  cfg['crop_coord'], cfg['data_channels'], cfg['k_fold'])
     
 

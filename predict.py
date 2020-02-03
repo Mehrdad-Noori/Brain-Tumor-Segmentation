@@ -143,10 +143,10 @@ if __name__ == '__main__':
        
     val_data_dir       = '/path/to/data/*'
     view               = 'axial'
-    saved_model_dir    = '/path/to/a/trained/model.hdf5'# ex './data/axial_model01.hdf5'
-    save_pred_dir      = './data/predict/'
-    batch_size         = 8
-    
+    saved_model_dir    = '/path/to/a/trained/model.hdf5'  #ex './save/axial_fold0/model.hdf5'
+    save_pred_dir      = './predict/'
+    batch_size         = 32
+
     
     if not os.path.isdir(save_pred_dir):
         os.mkdir(save_pred_dir)

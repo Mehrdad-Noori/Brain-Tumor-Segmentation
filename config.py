@@ -25,7 +25,7 @@ The path to all brain volumes (ex: suppose we have a folder 'BraTS2019' that
 contains two HGG and LGG folders each of which contains some folders so:
 dataset_dir="./BraTS2019/*/*")
 """
-cfg['data_dir']              = '/media/meno/Game/DataSets/BRATS19/MICCAI_BraTS_2019_Data_Training/*/*'
+cfg['data_dir']              = '/path/to/data/'
 
 
 
@@ -46,9 +46,16 @@ cfg['data_channels']         = 4
 
 
 """
-The path to save table file + folds indexes + models + ...
+The path to save table file + k-fold files
 """
-cfg['save_dir']              = './data/'
+cfg['save_data_dir']         = './data/'
+
+
+
+"""
+The path to save models + log files + tensorboards
+"""
+cfg['save_dir']        = './save/'
 
 
 
@@ -67,7 +74,7 @@ cfg['hdf5_dir']              = './data/data.hdf5'
 
 
 """
-The path to brain indexes of specific fold (a numpy file that is saved in ./data/ by default)
+The path to brain indexes of specific fold (a numpy file that was saved in ./data/ by default)
 """
 cfg['brains_idx_dir']        = './data/fold0_idx.npy'
 
@@ -84,8 +91,8 @@ cfg['view']                  = 'axial'
 """
 The batch size for training and validating the model
 """
-cfg['batch_size']            = 32
-cfg['val_batch_size']        = 64
+cfg['batch_size']            = 16
+cfg['val_batch_size']        = 32
 
 
 
@@ -119,7 +126,7 @@ Maximum number of processes to spin up when using process-based threading.
 If unspecified, workers will default to 1. If 0, will execute the generator 
 on the main thread. "https://keras.io/models/model/"
 """
-cfg['workers']               = 5
+cfg['workers']               = 1
 
 
 
