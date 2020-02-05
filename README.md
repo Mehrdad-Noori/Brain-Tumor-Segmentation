@@ -5,9 +5,9 @@ The [BraTS](http://www.med.upenn.edu/sbia/brats2018.html) data set is used for t
 
 ### Pre-processing
 For pre-processing the data, firstly, [N4ITK](https://ieeexplore.ieee.org/abstract/document/5445030) algorithm is adopted on each MRI modalities to correct the inhomogeneity of these images. Secondly, 1% of the top and bottom intensities is removed, and then each modality is normalized to zero mean and unit variance.
-<br />
+
+
 ### Architecture
-<br />
 
 ![image](https://github.com/Mehrdad-Noori/Brain-Tumor-Segmentation/blob/master/doc/model.png)
 
@@ -17,8 +17,8 @@ The network is based on U-Net architecture with some modifications as follows:
 
 <p align="center"><img src="https://github.com/Mehrdad-Noori/Brain-Tumor-Segmentation/blob/master/doc/attention.png" width="500" height="250"></p>
 
-### Training Process
 
+### Training Process
 Since our proposed network is a 2D architecture, we need to extract 2D slices from 3D volumes of MRI images. To benefit from 3D contextual information of input images, we extract 2D slices from both Axial and Coronal views, and then train a network for each view separately. In the test time, we build the 3D output volume for each model by concatenating the 2D predicted maps. Finally, we fuse the two views by pixel-wise averaging. 
 
 ![image](https://github.com/Mehrdad-Noori/Brain-Tumor-Segmentation/blob/master/doc/MultiView.png)
