@@ -29,7 +29,7 @@ Since our proposed network is a 2D architecture, we need to extract 2D slices fr
 
 <br />
 
-<p align="left"><img src="https://github.com/Mehrdad-Noori/Brain-Tumor-Segmentation/blob/master/doc/MultiView.jpg" width="500" height="180"></p>
+<p align="left"><img src="https://github.com/Mehrdad-Noori/Brain-Tumor-Segmentation/blob/master/doc/MultiView.jpg" width="600" height="220"></p>
 
 <br />
 
