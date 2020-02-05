@@ -22,12 +22,12 @@ The network is based on U-Net architecture with some modifications as follows:
 ### Training Process
 Since our proposed network is a 2D architecture, we need to extract 2D slices from 3D volumes of MRI images. To benefit from 3D contextual information of input images, we extract 2D slices from both Axial and Coronal views, and then train a network for each view separately. In the test time, we build the 3D output volume for each model by concatenating the 2D predicted maps. Finally, we fuse the two views by pixel-wise averaging. 
 
-<p align="center"><img src="https://github.com/Mehrdad-Noori/Brain-Tumor-Segmentation/blob/master/doc/MultiView.png" width="500" height="150"></p>
+<p align="center"><img src="https://github.com/Mehrdad-Noori/Brain-Tumor-Segmentation/blob/master/doc/MultiView.png" width="500" height="200"></p>
 
 ### Results
 These results are obtained from the [BraTS online evaluation platform](https://ipp.cbica.upenn.edu/) using the BRATS 2018 validation data set
 
-<p align="center"><img src="https://github.com/Mehrdad-Noori/Brain-Tumor-Segmentation/blob/master/doc/table.png" width="500" height="200"></p>
+<p align="center"><img src="https://github.com/Mehrdad-Noori/Brain-Tumor-Segmentation/blob/master/doc/table.png" width="500" height="150"></p>
 
 
 ### Usage
