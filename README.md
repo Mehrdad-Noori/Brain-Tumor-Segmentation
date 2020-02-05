@@ -16,8 +16,6 @@ The network is based on U-Net architecture with some modifications as follows:
 - The minor modifications: adding Residual Units, strided convolution, PReLU activation and Batch Normalization layers to the original U-Net
 - The attention mechanism: employing [Squeeze and Excitation Block](https://arxiv.org/abs/1709.01507) (SE) on concatenated multi-level features. This technique prevents confusion for the model by weighting each of the channels adaptively ([our paper](https://ieeexplore.ieee.org/document/8964956)).
 
-![image](https://github.com/Mehrdad-Noori/Brain-Tumor-Segmentation/blob/master/doc/attention.png)
-
 <p align="center"><img src="https://github.com/Mehrdad-Noori/Brain-Tumor-Segmentation/blob/master/doc/attention.png" width="500" height="250"></p>
 
 ### Training Process
