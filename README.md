@@ -1,4 +1,10 @@
 
+## Overview
+- [Dataset](#Dataset)
+- [Pre-processing](#Pre-processing)
+- [Architecture](#Architecture)
+- [Training Process](#Training_Process)
+
 
 ### Dataset
 The [BraTS](http://www.med.upenn.edu/sbia/brats2018.html) data set is used for training and evaluating the model. This dataset contains four modalities for each individual brain, namely, T1, T1c (post-contrast T1), T2, and Flair which were skull-stripped, resampled and coregistered. For more information, please refer to the main site.
