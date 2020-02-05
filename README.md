@@ -41,6 +41,10 @@ These results are obtained from the [BraTS online evaluation platform](https://i
 
 <br />
 
+![image](https://github.com/Mehrdad-Noori/Brain-Tumor-Segmentation/blob/master/doc/example.png)
+
+<br />
+
 ### Usage
 1- Download the BRATS 2019, 2018 or 2017 data by following the steps described in [BraTS](https://www.med.upenn.edu/cbica/brats2019/registration.html)
 
