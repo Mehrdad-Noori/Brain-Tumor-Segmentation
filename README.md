@@ -19,7 +19,7 @@ The network is based on U-Net architecture with some modifications as follows:
 
 <br />
 
-<p align="center"><img src="https://github.com/Mehrdad-Noori/Brain-Tumor-Segmentation/blob/master/doc/attention.png" width="500" height="250"></p>
+<p align="left"><img src="https://github.com/Mehrdad-Noori/Brain-Tumor-Segmentation/blob/master/doc/attention.png" width="500" height="250"></p>
 
 <br />
 
@@ -28,7 +28,7 @@ Since our proposed network is a 2D architecture, we need to extract 2D slices fr
 
 <br />
 
-<p align="center"><img src="https://github.com/Mehrdad-Noori/Brain-Tumor-Segmentation/blob/master/doc/MultiView.png" width="500" height="200"></p>
+<p align="left"><img src="https://github.com/Mehrdad-Noori/Brain-Tumor-Segmentation/blob/master/doc/MultiView.png" width="500" height="200"></p>
 
 <br />
 
@@ -37,7 +37,7 @@ These results are obtained from the [BraTS online evaluation platform](https://i
 
 <br />
 
-<p align="center"><img src="https://github.com/Mehrdad-Noori/Brain-Tumor-Segmentation/blob/master/doc/table.png" width="500" height="150"></p>
+<p align="left"><img src="https://github.com/Mehrdad-Noori/Brain-Tumor-Segmentation/blob/master/doc/table.png" width="500" height="150"></p>
 
 <br />
 
