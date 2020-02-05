@@ -71,12 +71,12 @@ The results are obtained from the [BraTS online evaluation platform](https://ipp
 
 3- Set the path to all brain volumes in `config.py` (ex: `cfg['data_dir'] = './BRATS19/MICCAI_BraTS_2019_Data_Training/*/*/'`)
 
-4- Read, preprocess and save all brain volumes into a single table file
+4- To read, preprocess and save all brain volumes into a single table file:
 ```
 python prepare_data.py
 ```
 
-5- Run the training:
+5- To Run the training:
 ```
 python train.py
 ```
