@@ -46,7 +46,7 @@ These results are obtained from the [BraTS online evaluation platform](https://i
 
 2- Perform N4ITK bias correction using [ANTs](https://github.com/ANTsX/ANTs), follow the steps in [this repo](https://github.com/ellisdg/3DUnetCNN) (This step is optional)
 
-3- Set The path to all brain volumes in the config.py (ex:  (ex:  cfg['data_dir'] ='./BRATS19/MICCAI_BraTS_2019_Data_Training/ */ */')
+3- Set The path to all brain volumes in the config.py (ex: cfg['data_dir'] ='./BRATS19/MICCAI_BraTS_2019_Data_Training/ */ */')
 
 4- Read, preprocess and save all brain volumes into a single table file
 ```
@@ -64,5 +64,5 @@ The model can be trained from 'axial', 'saggital' or 'coronal' views (set cfg['v
 ```
 python predict.py
 ```
-The predictions will be written in .nii.gz format and can be uploaded to BraTS online evaluation platform.
+The predictions will be written in .nii.gz format and can be uploaded to [BraTS online evaluation platform](https://ipp.cbica.upenn.edu/).
 
