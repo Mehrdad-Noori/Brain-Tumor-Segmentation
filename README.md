@@ -32,19 +32,24 @@ These results are obtained from the [BraTS online evaluation platform](https://i
 
 ### Usage
 1- Download the BRATS 2019, 2018 or 2017 data by following the steps described in [BraTS](https://www.med.upenn.edu/cbica/brats2019/registration.html)
+
 2- Perform N4ITK bias correction using [ANTs](https://github.com/ANTsX/ANTs), follow the steps in [this repo](https://github.com/ellisdg/3DUnetCNN) (This step is optional)
+
 3- Set The path to all brain volumes in the config.py (ex:  cfg['data_dir'] ='./BRATS19/MICCAI_BraTS_2019_Data_Training/*/*')
+
 4- Read, preprocess and save all brain volumes into a single table file
 ```
 python prepare_data.py
 ```
+
 5- Run the training:
 ```
 python train.py
 ```
 The model can be trained from 'axial', 'saggital' or 'coronal' views (set cfg['view'] in the config.py). Moreover, K-fold cross-validation can be used (set cfg['k_fold'] in the config.py)
 
-5- To predict and save mlabel aps:
+
+6- To predict and save mlabel aps:
 ```
 python predict.py
 ```
