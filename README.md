@@ -8,8 +8,8 @@ For pre-processing the data, firstly, [N4ITK](https://ieeexplore.ieee.org/abstra
 
 
 ### Architecture
-
-
+\
+\
 ![image](https://github.com/Mehrdad-Noori/Brain-Tumor-Segmentation/blob/master/doc/model.png)
 
 The network is based on U-Net architecture with some modifications as follows:
