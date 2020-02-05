@@ -6,7 +6,9 @@ The [BraTS](http://www.med.upenn.edu/sbia/brats2018.html) data set is used for t
 ### Pre-processing
 For pre-processing the data, firstly, [N4ITK](https://ieeexplore.ieee.org/abstract/document/5445030) algorithm is adopted on each MRI modalities to correct the inhomogeneity of these images. Secondly, 1% of the top and bottom intensities is removed, and then each modality is normalized to zero mean and unit variance.
 
+
 ### Architecture
+
 
 ![image](https://github.com/Mehrdad-Noori/Brain-Tumor-Segmentation/blob/master/doc/model.png)
 
@@ -15,6 +17,8 @@ The network is based on U-Net architecture with some modifications as follows:
 - The attention mechanism: employing [Squeeze and Excitation Block](https://arxiv.org/abs/1709.01507) (SE) on concatenated multi-level features. This technique prevents confusion for the model by weighting each of the channels adaptively ([our paper](https://ieeexplore.ieee.org/document/8964956)).
 
 ![image](https://github.com/Mehrdad-Noori/Brain-Tumor-Segmentation/blob/master/doc/attention.png)
+
+<p align="center"><img src="https://github.com/Mehrdad-Noori/Brain-Tumor-Segmentation/blob/master/doc/attention.png" width="500" height="250"></p>
 
 ### Training Process
 
