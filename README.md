@@ -44,7 +44,7 @@ Since our proposed network is a 2D architecture, we need to extract 2D slices fr
 <br />
 
 ### Results
-the results are obtained from the [BraTS online evaluation platform](https://ipp.cbica.upenn.edu/) using the BraTS 2018 validation set.
+The results are obtained from the [BraTS online evaluation platform](https://ipp.cbica.upenn.edu/) using the BraTS 2018 validation set.
 
 <br />
 
