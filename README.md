@@ -89,7 +89,7 @@ The predictions will be written in .nii.gz format and can be uploaded to [BraTS 
 ### Citation
 
 ```
-@INPROCEEDINGS{Noori2019attention,
+@inproceedings{Noori2019attention,
 author={M. {Noori} and A. {Bahri} and K. {Mohammadi}},
 booktitle={2019 9th International Conference on Computer and Knowledge Engineering (ICCKE)},
 title={Attention-Guided Version of 2D UNet for Automatic Brain Tumor Segmentation},
