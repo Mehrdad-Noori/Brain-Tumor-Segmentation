@@ -46,6 +46,14 @@ These results are obtained from the [BraTS online evaluation platform](https://i
 
 <br />
 
+### Dependencies
+- [numpy 1.17.4](https://numpy.org/)
+- [nibabe l 3.0.1](https://nipy.org/nibabel/)
+- [scipy 1.3.2](https://www.scipy.org/)
+- [tables 3.6.1](https://www.pytables.org/)
+- [Tensorflow 1.12.0](https://www.tensorflow.org/)
+- [Keras 2.2.4](https://keras.io/)
+
 ### Usage
 1- Download the BRATS 2019, 2018 or 2017 data by following the steps described in [BraTS](https://www.med.upenn.edu/cbica/brats2019/registration.html)
 
