@@ -78,3 +78,18 @@ The model can be trained from `axial`, `saggital` or `coronal` views (set `cfg['
 python predict.py
 ```
 The predictions will be written in .nii.gz format and can be uploaded to [BraTS online evaluation platform](https://ipp.cbica.upenn.edu/).
+
+### Citation
+
+```
+@INPROCEEDINGS{Noori2019attention,
+author={M. {Noori} and A. {Bahri} and K. {Mohammadi}},
+booktitle={2019 9th International Conference on Computer and Knowledge Engineering (ICCKE)},
+title={Attention-Guided Version of 2D UNet for Automatic Brain Tumor Segmentation},
+year={2019},
+pages={269-275},
+keywords={Brain tumor segmentation;medical image analysis;attention mechanism;convolution neural network},
+doi={10.1109/ICCKE48569.2019.8964956},
+ISSN={2375-1304},
+month={Oct},}
+```
