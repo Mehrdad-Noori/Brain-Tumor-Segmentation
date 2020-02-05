@@ -37,7 +37,7 @@ These results are obtained from the [BraTS online evaluation platform](https://i
 
 <br />
 
-<p align="left"><img src="https://github.com/Mehrdad-Noori/Brain-Tumor-Segmentation/blob/master/doc/table.png" width="500" height="130"></p>
+<p align="center"><img src="https://github.com/Mehrdad-Noori/Brain-Tumor-Segmentation/blob/master/doc/table.png" width="500" height="130"></p>
 
 <br />
 
