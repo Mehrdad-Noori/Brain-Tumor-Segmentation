@@ -4,8 +4,8 @@
 The [BraTS](http://www.med.upenn.edu/sbia/brats2018.html) data set is used for training and evaluating the model. This dataset contains four modalities for each individual brain, namely, T1, T1c (post-contrast T1), T2, and Flair which were skull-stripped, resampled and coregistered. For more information, please refer to the main site. 
 
 ### Pre-processing
-For pre-processing the data, firstly, [N4ITK](https://ieeexplore.ieee.org/abstract/document/5445030) algorithm is adopted on each MRI modalities to correct the inhomogeneity of these images. Secondly, 1% of the top and bottom intensities is removed, and then each modality is normalized to zero mean and unit variance.\
-
+For pre-processing the data, firstly, [N4ITK](https://ieeexplore.ieee.org/abstract/document/5445030) algorithm is adopted on each MRI modalities to correct the inhomogeneity of these images. Secondly, 1% of the top and bottom intensities is removed, and then each modality is normalized to zero mean and unit variance.
+\
 
 ### Architecture
 
