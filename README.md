@@ -14,19 +14,19 @@ The network is based on U-Net architecture with some modifications as follows:
 - The minor modifications: adding Residual Units, strided convolution, PReLU activation and Batch Normalization layers to the original U-Net
 - The attention mechanism: employing [Squeeze and Excitation Block](https://arxiv.org/abs/1709.01507) (SE) on concatenated multi-level features. This technique prevents confusion for the model by weighting each of the channels adaptively ([our paper](https://ieeexplore.ieee.org/document/8964956)).
 
-![image](https://github.com/Mehrdad-Noori/Brain-Tumor-Segmentation/doc/attention.PNG)
+![image](https://github.com/Mehrdad-Noori/Brain-Tumor-Segmentation/blob/master/doc/attention.png)
 
 ### Training Process
 
 Since our proposed network is a 2D architecture, we need to extract 2D slices from 3D volumes of MRI images. To benefit from 3D contextual information of input images, we extract 2D slices from both Axial and Coronal views, and then train a network for each view separately. In the test time, we build the 3D output volume for each model by concatenating the 2D predicted maps. Finally, we fuse the two views by pixel-wise averaging. 
 
-![image](https://github.com/Mehrdad-Noori/Brain-Tumor-Segmentation/doc/MultiView.PNG)
+![image](https://github.com/Mehrdad-Noori/Brain-Tumor-Segmentation/blob/master/doc/MultiView.png)
 
 
 ### Results
 These results are obtained from the [BraTS online evaluation platform](https://ipp.cbica.upenn.edu/) using the BRATS 2018 validation data set
 
-![image](https://github.com/Mehrdad-Noori/Brain-Tumor-Segmentation/doc/table.PNG)
+![image](https://github.com/Mehrdad-Noori/Brain-Tumor-Segmentation/blob/master/doc/table.png)
 
 
 ### Usage
