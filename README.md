@@ -89,14 +89,12 @@ The predictions will be written in .nii.gz format and can be uploaded to [BraTS 
 ### Citation
 
 ```
-@inproceedings{Noori2019attention,
-author={M. {Noori} and A. {Bahri} and K. {Mohammadi}},
-booktitle={2019 9th International Conference on Computer and Knowledge Engineering (ICCKE)},
-title={Attention-Guided Version of 2D UNet for Automatic Brain Tumor Segmentation},
-year={2019},
-pages={269-275},
-keywords={Brain tumor segmentation;medical image analysis;attention mechanism;convolution neural network},
-doi={10.1109/ICCKE48569.2019.8964956},
-ISSN={2375-1304},
-month={Oct},}
+@inproceedings{noori2019attention,
+  title={Attention-Guided Version of 2D UNet for Automatic Brain Tumor Segmentation},
+  author={Noori, Mehrdad and Bahri, Ali and Mohammadi, Karim},
+  booktitle={2019 9th International Conference on Computer and Knowledge Engineering (ICCKE)},
+  pages={269--275},
+  year={2019},
+  organization={IEEE}
+}
 ```
