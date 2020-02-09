@@ -68,7 +68,7 @@ The results are obtained from the [BraTS online evaluation platform](https://ipp
 ### Usage
 1- Download the BRATS 2019, 2018 or 2017 data by following the steps described in [BraTS](https://www.med.upenn.edu/cbica/brats2019/registration.html)
 
-2- Perform N4ITK bias correction using [ANTs](https://github.com/ANTsX/ANTs), follow the steps in [this repo](https://github.com/ellisdg/3DUnetCNN) (This step is optional)
+2- Perform N4ITK bias correction using [ANTs](https://github.com/ANTsX/ANTs), follow the steps in [this repo](https://github.com/ellisdg/3DUnetCNN) (this step is optional)
 
 3- Set the path to all brain volumes in `config.py` (ex: `cfg['data_dir'] = './BRATS19/MICCAI_BraTS_2019_Data_Training/*/*/'`)
 
