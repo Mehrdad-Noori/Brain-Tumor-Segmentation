@@ -62,7 +62,7 @@ The results are obtained from the [BraTS online evaluation platform](https://ipp
 - [nibabe l 3.0.1](https://nipy.org/nibabel/)
 - [scipy 1.3.2](https://www.scipy.org/)
 - [tables 3.6.1](https://www.pytables.org/)
-- [Tensorflow 1.12.0](https://www.tensorflow.org/)
+- [Tensorflow 1.15.2](https://www.tensorflow.org/)
 - [Keras 2.2.4](https://keras.io/)
 
 ### Usage
