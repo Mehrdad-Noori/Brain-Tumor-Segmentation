@@ -36,7 +36,7 @@ def train_model(hdf5_dir, brains_idx_dir, view, modified_unet=True, batch_size=1
     model             = unet_model(model_input_shape, modified_unet, lr, start_chs, levels)
     # training the model
     model.fit_generator(datagen_train, epochs=epochs, use_multiprocessing=multiprocessing, 
-                        callbacks=callbacks, validation_data = datagen_val, steps_per_epoch=5, validation_steps=5)
+                        callbacks=callbacks, validation_data = datagen_val)
 
 
    
