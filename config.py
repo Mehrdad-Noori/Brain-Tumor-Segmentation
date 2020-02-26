@@ -21,9 +21,9 @@ cfg['crop_coord']            =  {'x0':42, 'x1':194,
 
 
 """
-The path to all brain volumes (ex: suppose we have a folder 'BraTS2019' that 
-contains two HGG and LGG folders each of which contains some folders so:
-dataset_dir="./BraTS2019/*/*")
+The path to all brain volumes (ex: suppose we have a folder 'MICCAI_BraTS_2019_Data_Training'
+that contains two HGG and LGG folders so:
+data_dir='./MICCAI_BraTS_2019_Data_Training/*/*')
 """
 cfg['data_dir']              = '/path/to/data/'
 
